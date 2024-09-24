@@ -6,12 +6,17 @@ const todoRoutes = require('./routes/route');
 const app = express();
 const port = 3000;
 
+
+
+
 // Middleware
 app.use(express.json());
 
 // Routes
 app.use('/todos', todoRoutes);
 
+
+console.log('Welcome from server');
 //connecting to database
 const connectMongoDB = async () => {
     try {
